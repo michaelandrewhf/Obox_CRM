@@ -105,8 +105,8 @@ def send_NFS(data: dict) -> str:
                     "codigo_servico": f"{str(enterprise.service_code)}",
                     "codigo_nbs": (
                         "122051200"
-                        if not enterprise.nbs_code
-                        else f"{str(enterprise.nbs_code)}"
+                        if not enterprise.code_nbs
+                        else f"{str(enterprise.code_nbs)}"
                     ),
                     "informacoes_complementares": enterprise.name,
                 },
