@@ -23,6 +23,7 @@ DataBase/
 # Static
 /static/jazzmin/
 /static/vendor/
+staticfiles
 
 
 tests/__pycache__/

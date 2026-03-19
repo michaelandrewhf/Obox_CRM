@@ -55,7 +55,7 @@ data-registrationfee="{{ registrationFee|default:'[]' }}">
           </div>
         </div>
         <div class="grid grid-cols-3 gap-4 text-sm w-[80%]">
-          <!-- Desconto -->
+          <!-- Desconto %-->
           <div>
             <label class="block font-medium">Desconto %:</label>
             <input @input="handlePercentDiscount($event.target.value)" type="number" step="any" min="0"
