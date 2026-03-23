@@ -94,8 +94,8 @@ class InstallmentsAdmin(admin.ModelAdmin):
 
 @admin.register(NFSe)
 class NFSeAdmin(admin.ModelAdmin):
-    list_display = ("id",)
-    search_fields = ("id",)
+    list_display = ("id", "student__name", "link_pdf", "reference_month")
+    search_fields = ("id", "student__name", "reference_month")
 
 
 @admin.register(Cashier)
