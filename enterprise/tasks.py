@@ -124,6 +124,7 @@ def send_NFS(data: dict) -> str:
                         if enterprise.neighborhood
                         else "Cosmópolis"
                     ),
+                    "cep": enterprise.cep if enterprise.cep else "13155000",
                 },
             }
             if enterprise.iss_retained:
