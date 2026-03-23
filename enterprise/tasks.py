@@ -119,6 +119,11 @@ def send_NFS(data: dict) -> str:
                     "numero": (
                         enterprise.house_number if enterprise.house_number else "00"
                     ),
+                    "bairro": (
+                        enterprise.neighborhood
+                        if enterprise.neighborhood
+                        else "Cosmópolis"
+                    ),
                 },
             }
             if enterprise.iss_retained:
