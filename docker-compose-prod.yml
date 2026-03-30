@@ -10,7 +10,7 @@ services:
       sh -c "
       python manage.py migrate --noinput &&
       gunicorn core.wsgi:application --bind 0.0.0.0:8000"
-    ports:
+    expose:
       - "8000:8000"
     env_file:
       - .env
@@ -40,9 +40,8 @@ services:
   rabbitmq:
     image: rabbitmq:4-management
     container_name: rabbitmq
-    ports:
+    expose:
       - "5672:5672"
-      - "15672:15672" # interface web opcional
     environment:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ_USER}
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
